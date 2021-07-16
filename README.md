@@ -8,3 +8,6 @@ Find threats in your source code
 
 ### use jq to pull all relevant fields for CSV report
 ```jq -r '.secrets[] | [.file, .rule, .lineNumber, .commit, .author, .date, .offender] | @csv' ./file02.json > file02-report.csv```
+
+### use jq to remove the line file from bloodhound-cli
+```jq 'del(.secrets[].line)' ./file03.json```
