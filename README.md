@@ -11,3 +11,6 @@ Find threats in your source code
 
 ### use jq to remove the line file from bloodhound-cli
 ```jq 'del(.secrets[].line)' ./file03.json```
+
+### use git to search all commits 
+```git grep "password=" `git show-ref --heads` ```
