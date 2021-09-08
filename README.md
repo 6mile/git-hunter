@@ -14,3 +14,6 @@ Find threats in your source code
 
 ### use git to search all commits 
 ```git grep "password=" `git show-ref --heads` ```
+
+### count number of commits in history
+```git rev-list HEAD --count```
