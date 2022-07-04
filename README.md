@@ -17,3 +17,12 @@ Find threats in your source code
 
 ### count number of commits in history
 ```git rev-list HEAD --count```
+
+### run gitleaks against all commits and point it at local directory
+```gitleaks -v --depth=$(git rev-list HEAD --count) -p ./```
+
+### see all developers that have worked in this repo
+```git shortlog -sne```
+
+### run gitleaks against a github url
+```gitleaks -v -r https://github.com/juice-shop/juice-shop.git```
