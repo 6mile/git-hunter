@@ -32,7 +32,6 @@ This is the best way to find sensitive data exposure in git repos
 ### count number of commits in history
 ```git rev-list HEAD --count```
 
-## Use Gitleaks to find embedded secrets
 
 ## Audit Git Commit Signing GPG
 
@@ -41,6 +40,7 @@ This is the best way to find sensitive data exposure in git repos
 
 ### See the GPG details for ALL commits
 
+## Use Gitleaks to find embedded secrets
 
 ### run gitleaks against all commits and point it at local directory
 ```gitleaks -v --depth=$(git rev-list HEAD --count) -p ./```
