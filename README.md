@@ -39,6 +39,7 @@ This is the best way to find sensitive data exposure in git repos
 ```git log --show-signature -1```
 
 ### See the GPG details for ALL commits
+```git log --show-signature```
 
 ## Use Gitleaks to find embedded secrets
 
