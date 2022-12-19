@@ -1,6 +1,15 @@
 # git-hunter
 Find threats in source code
 
+## Pre-requisites:
+
+### github-subdomains
+The obvious use here is to find subdomains in GitHub repositories, but this also will find the developers working on those projects.
+https://github.com/gwen001/github-subdomains
+
+### gitleaks
+This is the best way to find sensitive data exposure in git repos
+
 ## Working with JSON and jq
 
 ### use jq to sort by two columns and use the csv format
@@ -25,10 +34,24 @@ Find threats in source code
 
 ## Use Gitleaks to find embedded secrets
 
+## Audit Git Commit Signing GPG
+
+### See the GPG signature details for last commit
+```git log --show-signature -1```
+
+### See the GPG details for ALL commits
+
+
 ### run gitleaks against all commits and point it at local directory
 ```gitleaks -v --depth=$(git rev-list HEAD --count) -p ./```
 
 ### run gitleaks against a github url
 ```gitleaks -v -r https://github.com/juice-shop/juice-shop.git```
 
+### find GitHub username via uid
+```curl https://api.github.com/user/106486165```
 
+## Use regex to find sensitive details in files
+
+### find emails in all files 
+```find ./ -exec grep -si -o '[A-Z0-9._%+-]\+@[A-Z0-9.-]\+\.[A-Z]\{2,4\}' {} \;```
