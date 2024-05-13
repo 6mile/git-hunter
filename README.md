@@ -56,3 +56,6 @@ This is the best way to find sensitive data exposure in git repos
 
 ### find emails in all files 
 ```find ./ -exec grep -si -o '[A-Z0-9._%+-]\+@[A-Z0-9.-]\+\.[A-Z]\{2,4\}' {} \;```
+
+### Make specific point in time git commits
+```git commit --date='2021-01-01 12:12:00' -m "message"```
